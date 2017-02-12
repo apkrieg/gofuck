@@ -19,8 +19,6 @@ GoFuck is a Brainfuck interpreter, compiler, and runtime with Ahead-of-Time (*AO
 | [ | while(*ptr) { |
 | ] | } |
 
-### Runtime
-
 ## Usage
 
 ### Interpret
