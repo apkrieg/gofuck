@@ -50,6 +50,7 @@ gofuck run hello_world.bf
 ### Debug
 
 Debug mode will start the runtime in debug mode.
+
 | Event | debug | run |
 | ----- | ----- | --- |
 | A `d` instruction is encountered | debug console is launched | no op |
