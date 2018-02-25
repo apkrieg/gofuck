@@ -15,6 +15,16 @@ func main() {
 	r := Runtime{}
 	switch tool := flag.Arg(0); {
 	// Build command
+	case tool == "help":
+		fmt.Println(`Usage: gofuck [option] [filename]
+Options:
+	build		Compiles the specified file
+	run		Runs the specified file
+	debug		Enters debug mode
+	help		Prints this screen
+If no option is specified, an interactive interpreter will be opened
+`)
+	
 	case tool == "build":
 		fileName := flag.Arg(1)
 		if fileName == "" {
@@ -98,6 +108,7 @@ func main() {
 			}
 		}
 	case tool == "":
+		fmt.Println("Enter 'quit' to exit")
 		fmt.Print(">>>: ")
 		scanner := bufio.NewScanner(os.Stdin)
 		for scanner.Scan() {
